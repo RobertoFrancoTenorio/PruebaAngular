@@ -1,0 +1,15 @@
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn {
+    width: 47%;
+    margin-top: 20px;
+    float: left;
+}
+
+.card {
+    -webkit-box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.45);
+    box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.45);
+}

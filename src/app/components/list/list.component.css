@@ -1,0 +1,12 @@
+i {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.headerCard {
+    display: flex;
+}
+
+.titulo {
+    margin-right: 600px;
+}

@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <div class="headerCard">
+                <h3 class="titulo">Listado de Empleados</h3>
+                <button type="button" class="btn btn-success float-right" [routerLink]="['/create-registro']">Agregar</button>
+            </div>
+
+            <table *ngIf="registros.length > 0" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Fecha de Creación</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let registro of registros">
+                        <th>{{registro.nombre}}</th>
+                        <td>{{registro.apellido}}</td>
+                        <td>{{registro.telefono}}</td>
+                        <td>{{registro.correo}}</td>
+                        <td>{{registro.fechaCreacion.toDate()}}</td>
+                        <td><i class="far fa-edit fa-lg text-info mr-10" [routerLink]="['/editRegistro/', registro.id]"></i> <i (click)="eliminarRegistro(registro.id)" [routerLink]="['/list']" class="far fa-trash-alt fa-lg text-danger"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

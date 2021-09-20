@@ -1,0 +1,36 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-6 offset-3">
+            <h2>Nuevo Registro</h2>
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>{{titulo}}</h3>
+                    <span *ngIf="submitted && createRegistro.invalid" class="badge bg-danger">Todos los campos son obligatorios</span>
+                    <form class="mt-4" [formGroup]="createRegistro" (ngSubmit)="agregarEditarRegistro()">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Apellido" formControlName="apellido">
+                            </div>
+                        </div>
+                        <div class="col mt-4">
+                            <input type="email" class="form-control" placeholder="Correo" formControlName="correo">
+                        </div>
+                        <div class="col mt-4">
+                            <input type="number" class="form-control" placeholder="Teléfono" formControlName="telefono">
+                        </div>
+                        <div class="buttons">
+                            <button type="text" class="btn btn-outline-warning" [routerLink]="['/list']">Volver</button>
+                            <button type="submit" class="btn btn-outline-success">Agregar</button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

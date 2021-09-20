@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pruebaapp-d07e1": {
+      "hosting": {
+        "crudApp": [
+          "pruebaapp-d07e1"
+        ]
+      }
+    }
+  }
+}
